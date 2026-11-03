@@ -1,0 +1,7 @@
+**/impl/
+**/work/
+*.gprj.user
+*.wlf
+*.vvp
+__pycache__/
+archive/final_project.zip

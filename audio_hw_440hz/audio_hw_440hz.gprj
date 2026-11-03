@@ -1,0 +1,41 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AT-60B" pn="GW5AT-LV60PG484AC1/I0">gw5at60b-002</Device>
+    <FileList>
+        <File path="src/ads1115_pressure4.v" type="file.verilog" enable="1"/>
+        <File path="src/adsr_envelope.v" type="file.verilog" enable="1"/>
+        <File path="src/audio_echo.v" type="file.verilog" enable="1"/>
+        <File path="src/audio_mixer_2.v" type="file.verilog" enable="1"/>
+        <File path="src/audio_mixer_4.v" type="file.verilog" enable="1"/>
+        <File path="src/dds.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll/gowin_pll_mod.v" type="file.verilog" enable="1"/>
+        <File path="src/i2s_pcm5102a_tx_48m.v" type="file.verilog" enable="1"/>
+        <File path="src/i2s_tx_48m.v" type="file.verilog" enable="1"/>
+        <File path="src/key_debounce.v" type="file.verilog" enable="1"/>
+        <File path="src/key_note_event_2.v" type="file.verilog" enable="1"/>
+        <File path="src/note_control.v" type="file.verilog" enable="1"/>
+        <File path="src/octave_note_event_16.v" type="file.verilog" enable="1"/>
+        <File path="src/oled_status_attach.v" type="file.verilog" enable="1"/>
+        <File path="src/performance_note_event_16.v" type="file.verilog" enable="1"/>
+        <File path="src/pll_init.v" type="file.verilog" enable="1"/>
+        <File path="src/poly_synth_core_32.v" type="file.verilog" enable="1"/>
+        <File path="src/poly_synth_core_32_dualtimbre.v" type="file.verilog" enable="1"/>
+        <File path="src/pt8211_tx_48m.v" type="file.verilog" enable="1"/>
+        <File path="src/scale_map_16.v" type="file.verilog" enable="1"/>
+        <File path="src/ssd1306_status_i2c.v" type="file.verilog" enable="1"/>
+        <File path="src/synth_engine_4.v" type="file.verilog" enable="1"/>
+        <File path="src/synth_engine_tdm_32.v" type="file.verilog" enable="1"/>
+        <File path="src/synth_voice.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/touch_note_event_16.v" type="file.verilog" enable="1"/>
+        <File path="src/ttp229_reader.v" type="file.verilog" enable="1"/>
+        <File path="src/voice_allocator_32.v" type="file.verilog" enable="1"/>
+        <File path="src/voice_allocator_4.v" type="file.verilog" enable="1"/>
+        <File path="constraint/top.cst" type="file.cst" enable="1"/>
+        <File path="constraint/top.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

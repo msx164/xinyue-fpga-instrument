@@ -1,0 +1,114 @@
+// =====================================================
+// SoundDomain B5-D + SSD1306 OLED
+// Tang Mega 60K + NEO Dock
+// PT8211 + Philips I2S dual output
+// =====================================================
+
+// 50 MHz system clock
+IO_LOC "sys_clk" V22;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+// Onboard keys
+IO_LOC "key1" AB13;
+IO_PORT "key1" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+
+IO_LOC "key0" AA13;
+IO_PORT "key0" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+
+// =====================================================
+// Original PT8211 audio interface
+// =====================================================
+
+IO_LOC "HP_BCK" Y17;
+IO_PORT "HP_BCK" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "HP_WS" AB17;
+IO_PORT "HP_WS" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "HP_DIN" AA16;
+IO_PORT "HP_DIN" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "PA_EN" AB16;
+IO_PORT "PA_EN" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+// =====================================================
+// Diagnostic LEDs - PMOD0
+// =====================================================
+
+IO_LOC "led_o[0]" P19;
+IO_PORT "led_o[0]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "led_o[1]" R19;
+IO_PORT "led_o[1]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "led_o[2]" T21;
+IO_PORT "led_o[2]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "led_o[3]" U21;
+IO_PORT "led_o[3]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+// =====================================================
+// TTP229 - PMOD1 IO6 / IO7
+// =====================================================
+
+IO_LOC "ttp_scl" AA19;
+IO_PORT "ttp_scl" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC "ttp_sdo" AB20;
+IO_PORT "ttp_sdo" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+// =====================================================
+// ADS1015 I2C - PMOD1 IO0 / IO1
+// =====================================================
+
+IO_LOC "ads_scl" Y22;
+IO_PORT "ads_scl" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+IO_LOC "ads_sda" Y21;
+IO_PORT "ads_sda" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+// =====================================================
+// ADS1015 ALERT - PMOD1 IO3
+// =====================================================
+
+IO_LOC "ads_alrt_n" AB22;
+IO_PORT "ads_alrt_n" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+// =====================================================
+// Standard Philips I2S - PMOD1 IO2 / IO4 / IO5
+// =====================================================
+
+// I2S bit clock
+IO_LOC "i2s_bck" AB21;
+IO_PORT "i2s_bck" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+// I2S Left / Right clock
+IO_LOC "i2s_lrck" AA20;
+IO_PORT "i2s_lrck" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+// I2S serial data
+IO_LOC "i2s_din" AA21;
+IO_PORT "i2s_din" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+
+// =====================================================
+// NEW: SSD1306 OLED - Independent I2C
+//
+// Tang Mega NEO Dock v31004
+// Lower 2x20P connector J13
+//
+// J13-1: SDRAM0_D0 -> FPGA E14 -> OLED SCL
+// J13-2: SDRAM0_D1 -> FPGA E13 -> OLED SDA
+//
+// OLED VCC must be supplied from verified 3.3V.
+// OLED GND must share FPGA GND.
+// Do not connect OLED VCC to J13-11 (5V).
+//
+// Both signal lines require pull-ups to 3.3V.
+// Verify the actual I/O bank voltage.
+// =====================================================
+
+IO_LOC "oled_scl" E14;
+IO_PORT "oled_scl" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
+
+IO_LOC "oled_sda" E13;
+IO_PORT "oled_sda" IO_TYPE=LVCMOS33 PULL_MODE=NONE BANK_VCCIO=3.3;
