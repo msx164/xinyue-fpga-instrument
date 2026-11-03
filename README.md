@@ -49,5 +49,3 @@ python archive/restore_archive.py
 原始文件：`final_project(1).zip`；大小：56531673 字节。
 
 SHA-256：`dce4b0f794a66db57fd7957af71ab91738fc2f6fb3eb67578522f7841824f26a`
-
-本次上传未修改 RTL、约束或验证脚本，未重新执行综合或硬件测试。未额外授予开源许可证。
